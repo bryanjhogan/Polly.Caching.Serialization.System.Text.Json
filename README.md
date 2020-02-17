@@ -38,10 +38,10 @@ The below example demonstrates how to configure the [`Polly.Caching.Serializatio
 For some `IDistributedCache distributedCache` instance (perhaps just configured and instantiated, perhaps provided to local code by Dependency Injection):
 
 ```csharp
-// Create a Newtonsoft.Json.JsonSerializerSettings defining any settings to use for serialization
-var serializerSettings = new JsonSerializerSettings()
+// Create a JsonSerializerOptions defining any settings to use for serialization
+JsonSerializerOptions serializerSettings = new JsonSerializerOptions
 {
-    // Any configuration options
+	WriteIndented = true
 };
 
 // Create a Polly cache policy for caching ProductDetails entities, using that IDistributedCache instance.
@@ -58,7 +58,7 @@ var productDetailsCachePolicy = Policy.CacheAsync<ProductDetails>(
 
 The example demonstrates usage with the [`Polly.Caching.IDistributedCache`](https://www.nuget.org/packages/polly.caching.idistributedcache) cache provider, but you may also use Polly.Caching.Serialization.System.Text.Json with any other `Polly.Caching.ISyncCacheProvider` or `Polly.Caching.IAsyncCacheProvider`.
 
-The configuration above is all that is necessary to configure JSON serialization as part of caching.  Values will be serialized using the supplied `JsonSerializerSettings` before being put to cache.  When values are retrieved from cache, they will be deserialized by the same `JsonSerializerSettings` before being returned by the policy.
+The configuration above is all that is necessary to configure JSON serialization as part of caching.  Values will be serialized using the supplied `JsonSerializerOptions` before being put to cache.  When values are retrieved from cache, they will be deserialized by the same `JsonSerializerOptions` before being returned by the policy.
 
 Usage of the CachePolicy at call site is unchanged from when a serializer was not in the mix:
 
