@@ -39,7 +39,7 @@ For some `IDistributedCache distributedCache` instance (perhaps just configured 
 
 ```csharp
 // Create a JsonSerializerOptions defining any settings to use for serialization
-JsonSerializerOptions serializerSettings = new JsonSerializerOptions
+JsonSerializerOptions serializerOptions = new JsonSerializerOptions
 {
 	WriteIndented = true
 };
@@ -47,7 +47,7 @@ JsonSerializerOptions serializerSettings = new JsonSerializerOptions
 // Create a Polly cache policy for caching ProductDetails entities, using that IDistributedCache instance.
 var productDetailsCachePolicy = Policy.CacheAsync<ProductDetails>(
     distributedCache.AsAsyncCacheProvider<string>().WithSerializer<ProductDetails, string>(
-        new Polly.Caching.Serialization.System.Text.Json.JsonSerializer<ProductDetails>(serializerSettings)
+        new Polly.Caching.Serialization.System.Text.Json.JsonSerializer<ProductDetails>(serializerOptions)
     ), 
     TimeSpan.FromMinutes(5) // for example
     /* for deeper CachePolicy configuration options: 
@@ -77,9 +77,10 @@ For details of changes by release see the [change log](CHANGELOG.md).
 
 # Acknowledgements
 
+* [@bryanjhogan](https://github.com/bryanjhogan) - Polly Json serializer using System.Text.Json
 * [@reisenberger](https://github.com/reisenberger) - Polly Json serializer using Newtonsoft.Json
 * [@seanfarrow](https://github.com/seanfarrow) and [@reisenberger](https://github.com/reisenberger) - Caching and serialization architecture in the main Polly repo
-* [@reisenberger](https://github.com/reisenberger) - Update to Polly v7.0.0
+* [@reisenberger](https://github.com/reisenberger) - Update to Polly v7.2.0
 
 # Instructions for Contributing
 
