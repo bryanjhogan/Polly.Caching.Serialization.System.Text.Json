@@ -1,10 +1,9 @@
 ﻿using System;
 using FluentAssertions;
 using Xunit;
-using Polly.Caching.Serialization.System.Text.Json;
 using System.Text.Json;
 
-namespace Polly.Specs.Caching.Serialization.System.Text.Json.Specs
+namespace Polly.Caching.Serialization.System.Text.Json.Specs
 {
     public class JsonSerializerSpecs
     {

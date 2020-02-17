@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.Caching.Serialization.System.Text.Json", "src\Polly.Caching.Serialization.System.Text.Json\Polly.Caching.Serialization.System.Text.Json.csproj", "{C9D59F30-246F-4BA6-B999-1B51BC8FA304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.Caching.Serialization.System.Text.Json", "Polly.Caching.Serialization.System.Text.Json\Polly.Caching.Serialization.System.Text.Json.csproj", "{C9D59F30-246F-4BA6-B999-1B51BC8FA304}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.Caching.Serialization.System.Text.Json.Specs", "src\Polly.Caching.Serialization.System.Text.Json.Specs\Polly.Caching.Serialization.System.Text.Json.Specs.csproj", "{645164C9-2513-4878-A141-4FA609576191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.Caching.Serialization.System.Text.Json.Specs", "Polly.Caching.Serialization.System.Text.Json.Specs\Polly.Caching.Serialization.System.Text.Json.Specs.csproj", "{645164C9-2513-4878-A141-4FA609576191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

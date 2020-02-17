@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Polly.Caching.Serialization.System.Text.Json</AssemblyName>
     <AssemblyOriginatorKeyFile>..\Polly.snk</AssemblyOriginatorKeyFile>
@@ -7,16 +7,8 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RootNamespace>Polly.Caching.Serialization.System.Text.Json</RootNamespace>
-    <Version>0.1.0-systemtextjson0001</Version>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <InformationalVersion>0.1.0.0</InformationalVersion>
-    <PackageVersion>0.1.0-systemtextjson0001</PackageVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
-    <Authors>Bryan Hogan, App vNext</Authors>
-    <Company>App vNext</Company>
-    <Copyright>Copyright (c) 2029, App vNext and contributors</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
